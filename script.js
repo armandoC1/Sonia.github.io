@@ -1,6 +1,6 @@
 // Función para cargar productos desde el archivo JSON
 function loadProducts(categoria) {
-    fetch('/src/data/productos.json')
+    fetch('productos.json')
         .then(response => response.json())
         .then(data => {
             const productos = data.productos.filter(product => product.categoria === categoria);
@@ -44,12 +44,10 @@ function backToCategories() {
     document.getElementById('categories').style.display = 'block';
 }
 
-// Función para capitalizar la primera letra de una palabra
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// Lógica del carrusel
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
 const totalSlides = slides.length;
