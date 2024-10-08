@@ -335,8 +335,7 @@ footer {
     pointer-events: none;
 }
 
-
-/* Botón hamburguesa para móviles */
+/* Estilo del botón hamburguesa */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -353,12 +352,12 @@ footer {
 /* Estilos para pantallas pequeñas (menú lateral oculto) */
 @media (max-width: 768px) {
     .hamburger {
-        display: block;  /* El botón hamburguesa solo se muestra en móviles */
+        display: block;
     }
 
     nav ul {
         position: fixed;
-        left: -250px;
+        left: -250px; /* Inicialmente oculto fuera del lado izquierdo */
         top: 0;
         height: 100%;
         width: 250px;
@@ -367,13 +366,13 @@ footer {
         justify-content: start;
         align-items: flex-start;
         padding-top: 20px;
-        transition: left 0.3s ease;
-        z-index: 1000;
+        transition: left 0.3s ease; /* Suave transición */
+        z-index: 1000; /* Asegurar que esté encima del contenido */
         display: flex;
     }
 
     nav ul.active {
-        left: 0; /* Menú visible en móviles */
+        left: 0; /* El menú se despliega desde el lado izquierdo */
     }
 
     nav ul li {
@@ -394,11 +393,17 @@ footer {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
+        z-index: 999; /* Fondo oscuro debajo del menú */
     }
 
     .menu-overlay.active {
         display: block;
+    }
+
+    /* Asegura que el carrusel no interfiera con el menú */
+    .carousel-section {
+        z-index: 1;
+        position: relative;
     }
 }
 
