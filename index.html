@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>Bazar</h1>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <nav>
-                <ul>
+                <ul id="menu">
                     <li><a href="#carousel">Inicio</a></li>
                     <li><a href="#categories">Categorías</a></li>
                     <li><a href="#recent-products">Productos Recientes</a></li>
@@ -23,6 +26,7 @@
             </nav>
         </div>
     </header>
+
 
     <!-- Carrusel de productos destacados -->
     <section id="carousel" class="carousel-section">
@@ -110,7 +114,8 @@
             <p>Para más información, contáctanos:</p>
             <ul class="contact-info">
                 <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
-                <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio" target="_blank">Síguenos en Facebook</a></li>
+                <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio"
+                        target="_blank">Síguenos en Facebook</a></li>
             </ul>
         </div>
     </section>
@@ -123,8 +128,11 @@
                 <img src="https://via.placeholder.com/150" alt="Foto del Desarrollador/a" class="developer-photo">
                 <div class="developer-details">
                     <h3>Carlos Hernández</h3>
-                    <p>Ayudo a negocios como el tuyo a destacar en línea con sitios web modernos y efectivos. Mi prioridad es crear una página que no solo te represente, sino que también atraiga clientes y haga crecer tu negocio.</p>
-                    <p>Hagamos que tu marca deje huella. Contáctame y juntos llevaremos tu presencia digital al siguiente nivel.</p>
+                    <p>Ayudo a negocios como el tuyo a destacar en línea con sitios web modernos y efectivos. Mi
+                        prioridad es crear una página que no solo te represente, sino que también atraiga clientes y
+                        haga crecer tu negocio.</p>
+                    <p>Hagamos que tu marca deje huella. Contáctame y juntos llevaremos tu presencia digital al
+                        siguiente nivel.</p>
                     <ul class="social-links">
                         <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                         <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -143,4 +151,5 @@
     <!-- Archivo JavaScript enlazado -->
     <script src="script.js"></script>
 </body>
+
 </html>
