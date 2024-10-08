@@ -334,3 +334,25 @@ footer {
     opacity: 0;
     pointer-events: none;
 }
+
+@media (max-width: 768px) {
+    /* Cambia los estilos para pantallas más pequeñas */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .carousel {
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
