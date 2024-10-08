@@ -80,6 +80,11 @@ updateCarousel();
 
 function toggleMenu() {
     var menu = document.getElementById('menu');
+    var overlay = document.getElementById('menu-overlay');
+    
+    // Alterna la visibilidad del menú y del fondo de sombra
     menu.classList.toggle('active');
+    overlay.classList.toggle('active');
 }
+
 
