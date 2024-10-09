@@ -400,6 +400,8 @@ footer {
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 10px;  /* Ajustar la distancia de la izquierda */
 }
 
 .menu-sidebar.active {
@@ -411,13 +413,23 @@ footer {
     padding: 15px 25px;
     text-decoration: none;
     font-size: 18px;
+    display: block;  /* Asegura que el enlace use todo el espacio disponible */
+    text-align: left;  /* Alinea los enlaces a la izquierda */
 }
 
 .menu-sidebar a:hover {
     background-color: #4CAF50;
     color: white;
+    border-radius: 5px;  /* Añadir un poco de redondez a los enlaces al pasar el ratón */
+    margin-right: 10px;
 }
 
+.menu-sidebar a.active {
+    background-color: #4CAF50;  /* Resaltar el enlace activo */
+    color: white;
+}
+
+/* Overlay */
 .menu-overlay {
     display: none;
     position: fixed;
@@ -431,4 +443,27 @@ footer {
 
 .menu-overlay.active {
     display: block;
+}
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: block; /* Visible solo en móviles */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Ajustes de espaciado para que el menú no esté muy pegado al borde */
+.menu-sidebar ul {
+    padding-left: 10px;  /* Aumenta el espacio del borde izquierdo */
+}
+
+.menu-sidebar li {
+    margin-bottom: 15px;  /* Aumentar el espaciado entre cada elemento del menú */
 }
