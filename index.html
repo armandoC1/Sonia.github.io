@@ -1,56 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bazar - Página principal</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1>Bazar</h1>
-                <!-- Botón hamburguesa (solo visible en móviles) -->
-                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                <!-- Fondo de sombra para cerrar el menú -->
-                <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
-                <nav>
-                    <ul id="menu">
-                        <li><a href="#carousel">Inicio</a></li>
-                        <li><a href="#categories">Categorías</a></li>
-                        <li><a href="#recent-products">Productos Recientes</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                        <li><a href="#developer">Desarrollador/a</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
 
-    <!-- Carrusel de productos destacados -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bazar - Página principal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Bazar</h1>
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <!-- Fondo de sombra para cerrar el menú -->
+            <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#carousel">Inicio</a></li>
+                    <li><a href="#categories">Categorías</a></li>
+                    <li><a href="#recent-products">Productos Recientes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#developer">Desarrollador/a</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <section id="carousel" class="carousel-section">
         <div class="carousel">
-            <div class="carousel-item active">
-                <img src="https://via.placeholder.com/1200x400" alt="Producto 1">
-                <div class="carousel-caption">
-                    <h2>Producto Destacado 1</h2>
-                    <p>Descripción del producto destacado 1</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/1200x400" alt="Producto 2">
-                <div class="carousel-caption">
-                    <h2>Producto Destacado 2</h2>
-                    <p>Descripción del producto destacado 2</p>
-                </div>
-            </div>
+            <!-- Aquí se cargarán dinámicamente los productos destacados -->
         </div>
         <div class="carousel-controls">
             <span class="prev"><i class="fas fa-chevron-left"></i></span>
             <span class="next"><i class="fas fa-chevron-right"></i></span>
         </div>
     </section>
+    
 
     <!-- Cápsulas de categorías -->
     <section id="categories" class="category-section">
@@ -72,40 +61,19 @@
                 <img src="electrodomesticos.webp" alt="Electrodomésticos">
                 <h3>Electrodomésticos</h3>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección de productos (oculta inicialmente) -->
-    <section id="products" class="products-section" style="display: none;">
-        <h2 id="products-category">Productos</h2>
-        <div class="products-grid">
-            <!-- Aquí se cargarán los productos dinámicamente -->
-        </div>
-        <button class="back-button" onclick="backToCategories()">Volver a Categorías</button>
-    </section>
-
-    <!-- Sección de productos recientes -->
-    <section id="recent-products" class="recent-products-section">
-        <h2>Productos Recientes</h2>
-        <div class="recent-products-grid">
-            <div class="recent-product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto Reciente 1">
-                <h3>Colonia para Hombre</h3>
-            </div>
-            <div class="recent-product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto Reciente 2">
-                <h3>Shampoo Nutritivo</h3>
-            </div>
-            <div class="recent-product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto Reciente 3">
-                <h3>Vestido Elegante</h3>
-            </div>
-            <div class="recent-product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto Reciente 4">
-                <h3>Licuadora de 3 Velocidades</h3>
+            <div class="category-card" onclick="showProducts('otros_tintes')">
+                <img src="tintes.webp" alt="Tintes">
+                <h3>Tintes</h3>
             </div>
         </div>
     </section>
+<!-- Sección de productos recientes -->
+<section id="recent-products" class="recent-products-section">
+    <h2>Productos Recientes</h2>
+    <div class="recent-products-grid">
+        <!-- Aquí se cargarán los productos recientes dinámicamente -->
+    </div>
+</section>
 
     <!-- Sección de contacto -->
     <section id="contact" class="section contact-section">
@@ -118,7 +86,7 @@
                         <i class="fas fa-phone-alt"></i> +502 7298 3578
                     </a>
                 </li>
-                
+
                 <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio"
                         target="_blank">Síguenos en Facebook</a></li>
             </ul>
@@ -139,8 +107,8 @@
                     <p>Hagamos que tu marca deje huella. Contáctame y juntos llevaremos tu presencia digital al
                         siguiente nivel.</p>
                     <ul class="social-links">
-                        <!-- <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li> -->
-                        <li><a href="https://github.com/armandoC1" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://github.com/armandoC1" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
                         <li><a href="mailto:ch148640@gmail.com"><i class="fas fa-envelope"></i></a></li>
                         <li><a href="https://wa.me/72983578" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                     </ul>

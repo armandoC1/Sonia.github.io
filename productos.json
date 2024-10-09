@@ -1,89 +1,137 @@
 {
-    "productos": [
+  "productos": [ 
+
+    {
+      "nombre": "Colonia para hombre",
+      "precio": "$20",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Fragancia masculina",
+      "categoria": "colonias"
+    },
+    {
+      "nombre": "Colonia para mujer",
+      "precio": "$22",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Fragancia femenina",
+      "categoria": "colonias"
+    },
+    {
+      "nombre": "Crema Corporal",
+      "precio": "$15",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Cuidado hidratante",
+      "categoria": "cuidado"
+    },
+    {
+      "nombre": "Shampoo",
+      "precio": "$8",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Shampoo nutritivo",
+      "categoria": "cuidado"
+    },
+    {
+      "nombre": "Camisa para hombre",
+      "precio": "$25",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Camisa casual",
+      "categoria": "ropa"
+    },
+    {
+      "nombre": "Vestido para mujer",
+      "precio": "$35",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Vestido elegante",
+      "categoria": "ropa"
+    },
+    {
+      "nombre": "Licuadora",
+      "precio": "$40",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Licuadora de 2 velocidades",
+      "categoria": "electrodomesticos"
+    },
+    {
+      "nombre": "Plancha",
+      "precio": "$30",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Plancha a vapor",
+      "categoria": "electrodomesticos"
+    },
+    {
+      "nombre": "Plancha de vapor",
+      "precio": "$40",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Plancha bonita",
+      "categoria": "electrodomesticos"
+    },
+    {
+      "nombre": "Cafetera",
+      "precio": "$30",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "40 tazas",
+      "categoria": "electrodomesticos"
+    },
+    {
+      "nombre": "Teléfono",
+      "precio": "$40",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Teléfono bonito",
+      "categoria": "electrodomesticos"
+    },
+    {
+      "nombre": "TV",
+      "precio": "$30",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "TV bonito",
+      "categoria": "electrodomesticos"
+    }
+  ],
+  "producto_destacado": [
+    {
+      "nombre": "Shampoo Nutritivo",
+      "precio": "$12",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Shampoo revitalizante",
+      "categoria": "producto_destacado"
+    }
+  ],
+  "productos_recientes": [
+    {
+      "nombre": "Colonia para Hombre",
+      "precio": "$20",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Fragancia masculina"
+    },
+    {
+      "nombre": "Shampoo Nutritivo",
+      "precio": "$8",
+      "imagen": "https://via.placeholder.com/200x150",
+      "descripcion": "Shampoo nutritivo"
+    }
+],
+  "otros": {
+    "tintes": [
       {
-        "nombre": "Colonia para hombre",
-        "precio": "$20",
+        "nombre": "Tinte para el cabello - Rubio",
+        "precio": "$10",
         "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Fragancia masculina",
-        "categoria": "colonias"
+        "descripcion": "Tinte rubio de larga duración",
+        "colores": ["#F8C471", "#FAD7A0", "#F4D03F"]
       },
       {
-        "nombre": "Colonia para mujer",
-        "precio": "$22",
+        "nombre": "Tinte para el cabello - Castaño",
+        "precio": "$10",
         "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Fragancia femenina",
-        "categoria": "colonias"
+        "descripcion": "Tinte castaño de larga duración",
+        "colores": ["#7D6608", "#935116", "#A04000"]
       },
       {
-        "nombre": "Crema Corporal",
-        "precio": "$15",
+        "nombre": "Tinte para el cabello - Rojo",
+        "precio": "$10",
         "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Cuidado hidratante",
-        "categoria": "cuidado"
-      },
-      {
-        "nombre": "Shampoo",
-        "precio": "$8",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Shampoo nutritivo",
-        "categoria": "cuidado"
-      },
-      {
-        "nombre": "Camisa para hombre",
-        "precio": "$25",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Camisa casual",
-        "categoria": "ropa"
-      },
-      {
-        "nombre": "Vestido para mujer",
-        "precio": "$35",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Vestido elegante",
-        "categoria": "ropa"
-      },
-      {
-        "nombre": "Licuadora",
-        "precio": "$40",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Licuadora de 2 velocidades",
-        "categoria": "electrodomesticos"
-      },
-      {
-        "nombre": "Plancha",
-        "precio": "$30",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Plancha a vapor",
-        "categoria": "electrodomesticos"
-      },
-      {
-        "nombre": "Plancha de vapor",
-        "precio": "$40",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Plancha bonito",
-        "categoria": "electrodomesticos"
-      },
-      {
-        "nombre": "Cafetera",
-        "precio": "$30",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "40 taza",
-        "categoria": "electrodomesticos"
-      },
-      {
-        "nombre": "Telefonos",
-        "precio": "$40",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "Telefono bointo",
-        "categoria": "electrodomesticos"
-      },
-      {
-        "nombre": "Tv",
-        "precio": "$30",
-        "imagen": "https://via.placeholder.com/200x150",
-        "descripcion": "TV bonito",
-        "categoria": "electrodomesticos"
+        "descripcion": "Tinte rojo de larga duración",
+        "colores": ["#B03A2E", "#C0392B", "#E74C3C"]
       }
     ]
   }
-  
+}
