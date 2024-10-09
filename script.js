@@ -191,7 +191,7 @@ function selectMenuOption(option) {
 }
 
 // Añadir eventos a cada opción del menú para cerrar automáticamente después de hacer clic
-document.querySelectorAll('#mobile-menu a').forEach(link => {
+document.querySelectorAll('#mobile-menu').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // Prevenir comportamiento por defecto del enlace
         const href = link.getAttribute('href');
