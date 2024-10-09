@@ -27,6 +27,16 @@
                     <li><a href="#developer">Desarrollador/a</a></li>
                 </ul>
             </nav>
+            <nav>
+                <ul id="menu" class="menu-sidebar">
+                    <li><a href="#carousel" onclick="toggleMenu()">Inicio</a></li>
+                    <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
+                    <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
+                    <li><a href="#developer" onclick="toggleMenu()">Desarrollador/a</a></li>
+                </ul>
+            </nav>
+            
         </div>
     </header>
 
@@ -67,13 +77,24 @@
             </div>
         </div>
     </section>
-<!-- Sección de productos recientes -->
+    
+    <!-- Sección de productos (oculta inicialmente) -->
+    <section id="products" class="products-section" style="display: none;">
+        <h2 id="products-category">Productos</h2>
+        <div class="products-grid">
+            <!-- Aquí se cargarán los productos dinámicamente -->
+        </div>
+        <button class="back-button" onclick="backToCategories()">Volver a Categorías</button>
+    </section>
+
+    <!-- Sección de productos recientes -->
 <section id="recent-products" class="recent-products-section">
     <h2>Productos Recientes</h2>
     <div class="recent-products-grid">
         <!-- Aquí se cargarán los productos recientes dinámicamente -->
     </div>
 </section>
+
 
     <!-- Sección de contacto -->
     <section id="contact" class="section contact-section">

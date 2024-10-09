@@ -28,6 +28,7 @@ function loadProducts(categoria) {
         })
         .catch(err => console.error('Error al cargar el JSON', err));
 }
+
 function loadRecentProducts() {
     fetch('productos.json')
         .then(response => response.json())
@@ -59,7 +60,6 @@ function renderRecentProducts(productos) {
 document.addEventListener('DOMContentLoaded', () => {
     loadRecentProducts();  // Cargar los productos recientes desde el JSON
 });
-
 
 // Función para mostrar los productos de categoría en el DOM
 function renderProducts(productos, categoria) {
@@ -166,6 +166,32 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// --- Funcionalidad del menú lateral desplegable ---
+
+// Función para abrir/cerrar el menú lateral
+function toggleMenu() {
+    const menu = document.getElementById('menu-lateral');
+    const overlay = document.getElementById('menu-overlay');
+    menu.classList.toggle('active'); // Mostrar/ocultar el menú
+    overlay.classList.toggle('active'); // Mostrar/ocultar el fondo oscuro
+}
+
+// Función para seleccionar una opción del menú
+function selectMenuOption(option) {
+    // Ocultar el menú lateral automáticamente después de seleccionar una opción
+    toggleMenu();
+    
+    // Opcional: Realiza cualquier acción adicional basada en la opción seleccionada
+    console.log(`Opción seleccionada: ${option}`);
+}
+
+// Añadir eventos a cada opción del menú para cerrar automáticamente después de hacer clic
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        selectMenuOption(link.textContent); // Pasar la opción seleccionada al menú
+    });
+});
+
 // Iniciar la página mostrando productos destacados en el carrusel y las categorías
 document.addEventListener('DOMContentLoaded', () => {
     loadProducts('producto_destacado'); // Mostrar productos destacados al inicio
@@ -173,22 +199,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('products').style.display = 'none'; // Los productos no se muestran inicialmente
     document.getElementById('carousel').style.display = 'block'; // Mostrar productos destacados en el carrusel
 });
-
-
-// // Función para cerrar el menú automáticamente después de seleccionar una opción en móviles
-// function closeMenuAfterSelection() {
-//     var menu = document.getElementById('menu');
-//     var overlay = document.getElementById('menu-overlay');
-//     menu.classList.remove('active');
-//     overlay.classList.remove('active');
-// }
-
-// // Añadir evento a todos los enlaces del menú para cerrar el menú después de hacer clic
-// document.querySelectorAll('#menu a').forEach(link => {
-//     link.addEventListener('click', closeMenuAfterSelection);
-// });
-
-// // Inicializar las funciones cuando la página se carga
-// document.addEventListener('DOMContentLoaded', () => {
-//     loadProducts('producto_destacado'); // Cargar los productos destacados al inicio
-// });
