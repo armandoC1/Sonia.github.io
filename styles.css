@@ -344,23 +344,19 @@ footer {
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
-    position: fixed; /* Cambiado a fixed para que no se superponga al contenido */
+    position: fixed; /* Cambiado a fixed para que siempre esté visible */
     top: 20px;
     right: 20px;
-    z-index: 1100; /* Asegurarse de que esté siempre visible por encima del contenido */
+    z-index: 1100; /* Asegurar que esté siempre visible */
 }
 
 /* Estilos para pantallas pequeñas (menú lateral oculto) */
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
+        display: block;
     }
 
-    nav.desktop-menu {
-        display: none; /* Ocultar el menú de escritorio en pantallas pequeñas */
-    }
-
-    nav.menu-sidebar {
+    nav ul {
         position: fixed;
         left: -250px; /* Inicialmente oculto fuera del lado izquierdo */
         top: 0;
@@ -376,20 +372,19 @@ footer {
         display: flex;
     }
 
-    nav.menu-sidebar.active {
+    nav ul.active {
         left: 0; /* El menú se despliega desde el lado izquierdo */
     }
 
-    nav.menu-sidebar li {
+    nav ul li {
         margin: 15px 20px;
     }
 
-    nav.menu-sidebar li a {
+    nav ul li a {
         color: white;
         font-size: 1.2rem;
         padding: 10px 0;
-        text-align: left; /* Alinear el texto a la izquierda */
-        width: 100%; /* Asegura que todo el espacio horizontal esté disponible */
+        width: 100%; /* Asegura que el enlace ocupe todo el ancho */
     }
 
     /* Fondo para cerrar el menú */
@@ -407,6 +402,12 @@ footer {
     .menu-overlay.active {
         display: block;
     }
+
+    /* Asegura que el carrusel no interfiera con el menú */
+    .carousel-section {
+        z-index: 1;
+        position: relative;
+    }
 }
 
 /* Estilos normales para pantallas grandes (computadora) */
@@ -415,8 +416,8 @@ footer {
         display: none;  /* Elimina el botón hamburguesa en computadoras */
     }
 
-    nav.desktop-menu {
-        display: flex; /* Mostrar el menú de escritorio en pantallas grandes */
+    nav ul {
+        display: flex;
         justify-content: center;
         position: static;
         flex-direction: row;
@@ -425,16 +426,50 @@ footer {
         background-color: transparent;
     }
 
-    nav.desktop-menu li {
+    nav ul li {
         margin: 0 20px;
     }
 
-    nav.desktop-menu li a {
+    nav ul li a {
         color: white;
         font-size: 1rem;
     }
+}
 
-    nav.menu-sidebar {
-        display: none; /* Ocultar el menú lateral en pantallas grandes */
-    }
+/* Estilos para los tintes */
+.tinte-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tinte-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.color-options {
+    margin-top: 10px;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 40px;  /* Aumentado de 20px a 40px */
+    height: 40px; /* Aumentado de 20px a 40px */
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+/* Ajustar el tamaño de las imágenes del carrusel */
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  /* Mantener la proporción de la imagen */
+    max-height: 700px;    /* Ajustar la altura máxima del carrusel */
+    max-width: 100%;
 }
