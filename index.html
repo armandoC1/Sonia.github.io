@@ -18,8 +18,10 @@
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <!-- Fondo de sombra para cerrar el menú -->
             <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
-            <nav>
-                <ul id="menu">
+    
+            <!-- Menú principal para pantallas grandes -->
+            <nav class="desktop-menu">
+                <ul id="main-menu">
                     <li><a href="#carousel">Inicio</a></li>
                     <li><a href="#categories">Categorías</a></li>
                     <li><a href="#recent-products">Productos Recientes</a></li>
@@ -27,8 +29,10 @@
                     <li><a href="#developer">Desarrollador/a</a></li>
                 </ul>
             </nav>
-            <nav>
-                <ul id="menu" class="menu-sidebar">
+    
+            <!-- Menú lateral para móviles -->
+            <nav class="menu-sidebar">
+                <ul id="mobile-menu">
                     <li><a href="#carousel" onclick="toggleMenu()">Inicio</a></li>
                     <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
                     <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
@@ -36,9 +40,9 @@
                     <li><a href="#developer" onclick="toggleMenu()">Desarrollador/a</a></li>
                 </ul>
             </nav>
-            
         </div>
     </header>
+    
 
     <section id="carousel" class="carousel-section">
         <div class="carousel">

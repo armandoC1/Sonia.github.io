@@ -170,7 +170,7 @@ function capitalizeFirstLetter(string) {
 
 // Función para abrir/cerrar el menú lateral
 function toggleMenu() {
-    const menu = document.getElementById('menu-lateral');
+    const menu = document.getElementById('mobile-menu'); // Asegúrate de que el id coincida con el HTML
     const overlay = document.getElementById('menu-overlay');
     menu.classList.toggle('active'); // Mostrar/ocultar el menú
     overlay.classList.toggle('active'); // Mostrar/ocultar el fondo oscuro
@@ -181,14 +181,21 @@ function selectMenuOption(option) {
     // Ocultar el menú lateral automáticamente después de seleccionar una opción
     toggleMenu();
     
-    // Opcional: Realiza cualquier acción adicional basada en la opción seleccionada
+    // Desplazarse suavemente a la sección seleccionada
+    const section = document.querySelector(option);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+
     console.log(`Opción seleccionada: ${option}`);
 }
 
 // Añadir eventos a cada opción del menú para cerrar automáticamente después de hacer clic
-document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        selectMenuOption(link.textContent); // Pasar la opción seleccionada al menú
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevenir comportamiento por defecto del enlace
+        const href = link.getAttribute('href');
+        selectMenuOption(href); // Pasar la opción seleccionada al menú
     });
 });
 
