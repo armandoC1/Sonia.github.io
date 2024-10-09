@@ -400,6 +400,51 @@ footer {
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
+}
+
+.menu-sidebar.active {
+    left: 0; /* Muestra el menú */
+}
+
+.menu-sidebar a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-sidebar a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+/* Menú lateral para dispositivos móviles */
+.menu-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculto por defecto */
+    width: 250px;
+    height: 100%;
+    background-color: #292929;
+    padding-top: 60px;
+    z-index: 999;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     padding-left: 10px;  /* Ajustar la distancia de la izquierda */
 }
@@ -467,3 +512,4 @@ footer {
 .menu-sidebar li {
     margin-bottom: 15px;  /* Aumentar el espaciado entre cada elemento del menú */
 }
+
