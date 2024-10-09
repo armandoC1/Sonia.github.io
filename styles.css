@@ -347,6 +347,94 @@ footer {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 1100; /* Asegurarse de que esté siempre visible por encima del contenido */
+}
+
+/* Estilos para pantallas pequeñas (menú lateral oculto) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
+    }
+
+    nav ul {
+        position: fixed;
+        left: -250px; /* Inicialmente oculto fuera del lado izquierdo */
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        padding-top: 60px; /* Espacio suficiente debajo del encabezado */
+        transition: left 0.3s ease; /* Suave transición */
+        z-index: 1000; /* Asegurar que esté encima del contenido */
+        display: flex;
+    }
+
+    nav ul.active {
+        left: 0; /* El menú se despliega desde el lado izquierdo */
+    }
+
+    nav ul li {
+        margin: 15px 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        text-align: left; /* Alinear el texto a la izquierda */
+        width: 100%; /* Asegura que todo el espacio horizontal esté disponible */
+    }
+
+    /* Fondo para cerrar el menú */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999; /* Fondo oscuro debajo del menú */
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Asegura que el carrusel no interfiera con el menú */
+    .carousel-section {
+        z-index: 1;
+        position: relative;
+    }
+}
+
+/* Estilos normales para pantallas grandes (computadora) */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;  /* Elimina el botón hamburguesa en computadoras */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        position: static;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 1rem;
+    }
 }
 
 /* Estilos para los tintes */
@@ -370,8 +458,8 @@ footer {
 
 .color-circle {
     display: inline-block;
-    width: 40px;  /* Cambiado de 20px a 40px para agrandar */
-    height: 40px;  /* Cambiado de 20px a 40px para agrandar */
+    width: 40px;  /* Tamaño más grande */
+    height: 40px;  /* Tamaño más grande */
     border-radius: 50%;
     margin: 0 5px;
     border: 2px solid #fff;
@@ -383,133 +471,33 @@ footer {
     width: 100%;
     height: auto;
     object-fit: contain;  /* Mantener la proporción de la imagen */
-    max-height: 700px;    /* Ajustar la altura máxima del carrusel a un valor más bajo */
+    max-height: 700px;    /* Ajustar la altura máxima del carrusel */
     max-width: 100%;
 }
 
-/* Menú lateral para dispositivos móviles */
-.menu-sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%; /* Oculto por defecto */
-    width: 250px;
-    height: 100%;
-    background-color: #292929;
-    padding-top: 60px;
-    z-index: 999;
-    transition: left 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-sidebar.active {
-    left: 0; /* Muestra el menú */
-}
-
-.menu-sidebar a {
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.menu-sidebar a:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-}
-
-.menu-overlay.active {
+/* Ajuste de la alineación de enlaces en el menú lateral para dispositivos móviles */
+nav ul li a {
     display: block;
-}
-/* Menú lateral para dispositivos móviles */
-.menu-sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%; /* Oculto por defecto */
-    width: 250px;
-    height: 100%;
-    background-color: #292929;
-    padding-top: 60px;
-    z-index: 999;
-    transition: left 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 10px;  /* Ajustar la distancia de la izquierda */
-}
-
-.menu-sidebar.active {
-    left: 0; /* Muestra el menú */
-}
-
-.menu-sidebar a {
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho del menú */
+    padding: 10px 20px;
+    text-align: left; /* Alinear texto a la izquierda */
     font-size: 18px;
-    display: block;  /* Asegura que el enlace use todo el espacio disponible */
-    text-align: left;  /* Alinea los enlaces a la izquierda */
-}
-
-.menu-sidebar a:hover {
-    background-color: #4CAF50;
+    font-weight: 500;
     color: white;
-    border-radius: 5px;  /* Añadir un poco de redondez a los enlaces al pasar el ratón */
-    margin-right: 10px;
+    text-decoration: none;
 }
 
-.menu-sidebar a.active {
-    background-color: #4CAF50;  /* Resaltar el enlace activo */
-    color: white;
+nav ul li a:hover {
+    background-color: #4CAF50; /* Efecto hover para el menú */
 }
 
-/* Overlay */
-.menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-}
-
+/* Fondo oscuro que cubre la pantalla cuando el menú está activo */
 .menu-overlay.active {
     display: block;
 }
 
-/* Estilo del botón hamburguesa */
-.hamburger {
-    display: block; /* Visible solo en móviles */
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* Animación para el menú lateral */
+nav ul.active {
+    left: 0;
+    transition: left 0.3s ease;
 }
-
-/* Ajustes de espaciado para que el menú no esté muy pegado al borde */
-.menu-sidebar ul {
-    padding-left: 10px;  /* Aumenta el espacio del borde izquierdo */
-}
-
-.menu-sidebar li {
-    margin-bottom: 15px;  /* Aumentar el espaciado entre cada elemento del menú */
-}
-
