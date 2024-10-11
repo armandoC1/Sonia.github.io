@@ -168,13 +168,13 @@ function capitalizeFirstLetter(string) {
 
 // --- Funcionalidad del menú lateral desplegable ---
 
+// Función para abrir/cerrar el menú lateral
 function toggleMenu() {
-    const menu = document.getElementById('main-menu');
-    const overlay = document.getElementById('menu-overlay');
-    menu.classList.toggle('active'); // Muestra/oculta el menú
-    overlay.classList.toggle('active'); // Muestra/oculta el fondo oscuro
+    const menu = document.getElementById('main-menu'); // El menú lateral para móviles
+    const overlay = document.getElementById('menu-overlay'); // Fondo oscuro
+    menu.classList.toggle('active'); // Mostrar/ocultar el menú
+    overlay.classList.toggle('active'); // Mostrar/ocultar el fondo oscuro
 }
-
 
 // Función para seleccionar una opción del menú
 function selectMenuOption(option) {

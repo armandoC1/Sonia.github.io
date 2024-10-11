@@ -14,14 +14,15 @@
     <header>
         <div class="container">
             <h1>Bazar</h1>
-            <!-- Botón hamburguesa visible en móviles -->
+            
+            <!-- Botón hamburguesa (solo visible en móviles) -->
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            <!-- Fondo oscuro para cerrar el menú -->
+            <!-- Fondo de sombra para cerrar el menú -->
             <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
     
-            <!-- Menú de navegación -->
+            <!-- Menú principal, será el mismo tanto para móviles como para escritorio -->
             <nav>
-                <ul id="main-menu">
+                <ul id="mobile-menu">
                     <li><a href="#presentation" onclick="toggleMenu()">Inicio</a></li>
                     <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
                     <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
@@ -31,7 +32,6 @@
             </nav>
         </div>
     </header>
-    
 
     <section class="presentation-section">
         <div class="presentation-content">
