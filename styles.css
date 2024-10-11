@@ -386,7 +386,7 @@ footer {
 
 /* Estilo del botón hamburguesa */
 .hamburger {
-    display: none;
+    display: none; /* Oculto en pantallas grandes */
     font-size: 30px;
     cursor: pointer;
     color: white;
@@ -415,45 +415,68 @@ footer {
     display: block; /* Mostrar el fondo oscuro cuando el menú esté activo */
 }
 
-/* Estilos para el menú principal (escritorio) */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Ajustes adicionales para mejorar la visualización en móviles */
+/* Estilos para pantallas móviles */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostrar el botón hamburguesa en móviles */
+    }
+
+    nav ul {
+        position: fixed;
+        left: -250px; /* Mantener el menú oculto fuera de la pantalla inicialmente */
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 60px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        left: 0; /* Mostrar el menú cuando esté activo */
+    }
+
     nav ul li {
-        padding: 20px 25px;  /* Mayor padding para facilitar el clic en móviles */
-    }
-    
-    .presentation-section {
-        padding: 80px 20px; /* Reducir ligeramente el padding en móviles */
+        padding: 15px 20px;
     }
 
-    .presentation-content h1 {
-        font-size: 2.5rem;  /* Ajustar el tamaño del texto para pantallas pequeñas */
+    nav ul li a {
+        color: white;
+        font-size: 1.2rem;
     }
 
-    .presentation-content p {
-        font-size: 1.3rem;  /* Reducir el tamaño del párrafo en móviles */
+    .menu-overlay {
+        display: none;
     }
 
-    .btn-presentation {
-        font-size: 1.1rem;  /* Ajustar el tamaño del botón en móviles */
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        position: static;
+        height: auto;
+        background-color: transparent;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
     }
 }
 
@@ -488,6 +511,8 @@ nav ul li a {
         font-size: 1rem;
     }
 }
+
+
 /* --- Módulo de presentación mejorado --- */
 .presentation-section {
     background: linear-gradient(135deg, #f5f5f5 50%, #ffffff 100%);
