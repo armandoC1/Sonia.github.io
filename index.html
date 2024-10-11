@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bazar - Página principal</title>
+    <title>Varidades Sonia - Página principal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,26 +14,16 @@
     <header>
         <div class="container">
             <h1>Bazar</h1>
+            
             <!-- Botón hamburguesa (solo visible en móviles) -->
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <!-- Fondo de sombra para cerrar el menú -->
             <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
     
-            <!-- Menú principal para pantallas grandes -->
-            <nav class="desktop-menu">
-                <ul id="main-menu">
-                    <li><a href="#carousel">Inicio</a></li>
-                    <li><a href="#categories">Categorías</a></li>
-                    <li><a href="#recent-products">Productos Recientes</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#developer">Desarrollador/a</a></li>
-                </ul>
-            </nav>
-    
-            <!-- Menú lateral para móviles -->
-            <nav class="menu-sidebar">
+            <!-- Menú principal, será el mismo tanto para móviles como para escritorio -->
+            <nav>
                 <ul id="mobile-menu">
-                    <li><a href="#carousel" onclick="toggleMenu()">Inicio</a></li>
+                    <li><a href="#presentation" onclick="toggleMenu()">Inicio</a></li>
                     <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
                     <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
@@ -42,15 +32,12 @@
             </nav>
         </div>
     </header>
-    
 
-    <section id="carousel" class="carousel-section">
-        <div class="carousel">
-            <!-- Aquí se cargarán dinámicamente los productos destacados -->
-        </div>
-        <div class="carousel-controls">
-            <span class="prev"><i class="fas fa-chevron-left"></i></span>
-            <span class="next"><i class="fas fa-chevron-right"></i></span>
+    <section class="presentation-section">
+        <div class="presentation-content">
+            <h1>Bienvenidos a Variedades Sonia</h1>
+            <p>Encuentra lo que buscas con la mejor calidad y precio</p>
+            <a href="#contact" class="btn-presentation">Contáctanos</a>
         </div>
     </section>
     
@@ -92,13 +79,12 @@
     </section>
 
     <!-- Sección de productos recientes -->
-<section id="recent-products" class="recent-products-section">
-    <h2>Productos Recientes</h2>
-    <div class="recent-products-grid">
-        <!-- Aquí se cargarán los productos recientes dinámicamente -->
-    </div>
-</section>
-
+    <section id="recent-products" class="recent-products-section">
+        <h2>Productos Recientes</h2>
+        <div class="recent-products-grid">
+            <!-- Aquí se cargarán los productos recientes dinámicamente -->
+        </div>
+    </section>
 
     <!-- Sección de contacto -->
     <section id="contact" class="section contact-section">
@@ -111,9 +97,7 @@
                         <i class="fas fa-phone-alt"></i> +502 7298 3578
                     </a>
                 </li>
-
-                <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio"
-                        target="_blank">Síguenos en Facebook</a></li>
+                <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio" target="_blank">Síguenos en Facebook</a></li>
             </ul>
         </div>
     </section>
@@ -126,14 +110,10 @@
                 <img src="https://via.placeholder.com/150" alt="Foto del Desarrollador/a" class="developer-photo">
                 <div class="developer-details">
                     <h3>Carlos Hernández</h3>
-                    <p>Ayudo a negocios como el tuyo a destacar en línea con sitios web modernos y efectivos. Mi
-                        prioridad es crear una página que no solo te represente, sino que también atraiga clientes y
-                        haga crecer tu negocio.</p>
-                    <p>Hagamos que tu marca deje huella. Contáctame y juntos llevaremos tu presencia digital al
-                        siguiente nivel.</p>
+                    <p>Ayudo a negocios como el tuyo a destacar en línea con sitios web modernos y efectivos. Mi prioridad es crear una página que no solo te represente, sino que también atraiga clientes y haga crecer tu negocio.</p>
+                    <p>Hagamos que tu marca deje huella. Contáctame y juntos llevaremos tu presencia digital al siguiente nivel.</p>
                     <ul class="social-links">
-                        <li><a href="https://github.com/armandoC1" target="_blank"><i class="fab fa-github"></i></a>
-                        </li>
+                        <li><a href="https://github.com/armandoC1" target="_blank"><i class="fab fa-github"></i></a></li>
                         <li><a href="mailto:ch148640@gmail.com"><i class="fas fa-envelope"></i></a></li>
                         <li><a href="https://wa.me/72983578" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                     </ul>
