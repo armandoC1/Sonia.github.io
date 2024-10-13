@@ -615,3 +615,66 @@ nav ul li a {
 .next {
     right: 10px;
 }
+/* Estilos para los colores disponibles */
+.color-description {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 30px; /* Aumentar tamaño */
+    height: 30px; /* Aumentar tamaño */
+    border-radius: 50%;
+    margin: 0 8px; /* Espaciado más amplio */
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.color-circle:hover {
+    transform: scale(1.2); /* Efecto de agrandar al pasar el mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+/* Mejorar los colores disponibles */
+.color-description {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px; /* Añadir margen inferior */
+}
+
+.color-options {
+    display: flex;
+    justify-content: center; /* Centrar los colores */
+    flex-wrap: wrap; /* Permitir que los colores se envuelvan en múltiples líneas si es necesario */
+    gap: 15px; /* Aumentar el espacio entre los círculos */
+    padding: 10px 0; /* Añadir espacio alrededor */
+}
+
+.color-circle {
+    display: inline-block;
+    width: 35px; /* Tamaño más grande */
+    height: 35px; /* Tamaño más grande */
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 3px solid #fff; /* Aumentar el grosor del borde */
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más suave para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.color-circle:hover {
+    transform: scale(1.2); /* Efecto de agrandar al pasar el mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}

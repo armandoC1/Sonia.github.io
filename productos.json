@@ -45,14 +45,210 @@
     }
   ],
   "otros": {
-    "tintes": [
-      {
-        "nombre": "Tinte para el cabello - Rubio",
-        "precio": "$10",
-        "imagenes": ["https://via.placeholder.com/200x150", "https://via.placeholder.com/200x150/FFD700"],
-        "descripcion": "Tinte rubio de larga duración",
-        "colores": ["#F8C471", "#FAD7A0", "#F4D03F"]
-      }
-    ]
+      "tintes": [
+        {
+          "nombre": "Tinte marca STAY Beautiful",
+          "precio": "$3",
+          "imagenes": ["/tinte1.jpg"],
+          "descripcion": "Tintes permanentes de marca STAY Beautiful",
+          "colores": [
+            {
+              "nombre": "NEW RUBIO",
+              "hex": "#F4E1B8"
+            },
+            {
+              "nombre": "CASTAÑO CLARO CENIZA",
+              "hex": "#8A6E55"
+            },
+            {
+              "nombre": "CASTAÑO COBRIZO CLARO",
+              "hex": "#B25C32"
+            },
+            {
+              "nombre": "VIOLETA",
+              "hex": "#4B0082"
+            },
+            {
+              "nombre": "ROJO",
+              "hex": "#B22222"
+            },
+            {
+              "nombre": "CHOCOLATE",
+              "hex": "#7B4A2D"
+            },
+            {
+              "nombre": "CASTAÑO-CHOCOLATE",
+              "hex": "#6F4E37"
+            },
+            {
+              "nombre": "RUBIO DORADO CLARO",
+              "hex": "#ECC76B"
+            },
+            {
+              "nombre": "PLATEADO BRILLANTE",
+              "hex": "#8A8A8A"
+            },
+            {
+              "nombre": "NEGRO AZULADO",
+              "hex": "#002147"
+            }
+          ]
+
+        }
+        ,
+        {
+          "nombre": "TINTE DE MARCA TOV CH COLOR",
+          "precio": "$2.50",
+          "imagenes": ["/tinte2.jpg"],
+          "descripcion": "Tintes permanentes de marca TOV CH COLOR",
+          "colores": [
+            {
+              "nombre": "CASTAÑO MEDIO",
+              "hex": "#A0522D"
+            },
+            {
+              "nombre": "GRIS CENIZA",
+              "hex": "#B3B3B3"
+            },
+            {
+              "nombre": "MORADO",
+              "hex": "#4B0082"
+            },
+            {
+              "nombre": "VERDE",
+              "hex": "#228B22"
+            },
+            {
+              "nombre": "ROSADO-MORADO",
+              "hex": "#D94DFF"
+            },
+            {
+              "nombre": "MORADO-GRIS",
+              "hex": "#7A5C9E"
+            },
+            {
+              "nombre": "NEGRO NATURAL",
+              "hex": "#0A0A0A"
+            },
+            {
+              "nombre": "RUBIO NATURAL",
+              "hex": "#F4D88B"
+            },
+            {
+              "nombre": "WHITE",
+              "hex": "#FFFFFF"
+            },
+            {
+              "nombre": "GRAPE VIOLET",
+              "hex": "#800080"
+            }
+           
+          ]
+        },
+        {
+          "nombre": "TINTE DE MARCA PURE COLOR",
+          "precio": "$2.50",
+          "imagenes": ["/tinte3.jpg"],
+          "descripcion": "Tintes permanentes de marca PURE COLOR",
+          "colores": [
+            {
+              "nombre": "CASTAÑO DORADO",
+              "hex": "#996515"
+            },
+            {
+              "nombre": "CENIZA",
+              "hex": "#E5E4E2"
+            },
+            {
+              "nombre": "VERDE",
+              "hex": "#228B22"
+            },
+            {
+              "nombre": "PLATINADO",
+              "hex": "#DAD7D7"
+            },
+            {
+              "nombre": "CAFE",
+              "hex": "#5C4033"
+            }
+          ]
+        },
+        {
+          "nombre": "TINTE DE MARCA NICE COLOR",
+          "precio": "$2.50",
+          "imagenes": ["/tinte4.jpg"],
+          "descripcion": "Tintes permanentes de marca NICE COLOR",
+          "colores": [
+            {
+              "nombre": "CASTAÑO OSCURO",
+              "hex": "#996515"
+            }
+          ]
+        },
+        {
+          "nombre": "TINTE DE MARCA KBCOLOR",
+          "precio": "$5",
+          "imagenes": ["/tinte5.jpeg"],
+          "descripcion": "Tintes permanentes de marca KBCOLOR",
+          "colores": [
+            {
+              "nombre": "RUBIO DORADO CLARO",
+              "hex": "#D8A47F"
+            }
+          ]
+        },
+        {
+          "nombre": "TINTE DE MARCA ZIS",
+          "precio": "$5",
+          "imagenes": ["/tinte7.jpeg"],
+          "descripcion": "Tintes permanentes de marca ZIS",
+          "colores": [
+            {
+              "nombre": "VIOLETA MEDIANO",
+              "hex": "#6A0DAD"
+            },
+            {
+              "nombre": "RUBIO CENIZA CLARO",
+              "hex": "#A89A8E"
+            }
+          ]
+        },
+        {
+          "nombre": "TINTE DE MARCA COLOR EAZY",
+          "precio": "$5",
+          "imagenes": ["/tinte6.jpeg"],
+          "descripcion": "Tintes permanentes de marca COLOR EAZY",
+          "colores": [
+            {
+              "nombre": "NEGRO AZULADO",
+              "hex": "#000033"
+            }
+          ]
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ]
+
+
+
+
+    }
+    
   }
-}
+

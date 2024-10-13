@@ -15,25 +15,22 @@
         <div class="container">
             <h1>Bazar</h1>
             
-            <!-- Botón hamburguesa (solo visible en móviles) -->
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            <!-- Fondo de sombra para cerrar el menú -->
+
             <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
     
-            <!-- Menú principal, será el mismo tanto para móviles como para escritorio -->
             <nav>
                 <ul id="main-menu">
                     <li><a href="#presentation" onclick="toggleMenu()">Inicio</a></li>
                     <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
                     <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
-                    <li><a href="#developer" onclick="toggleMenu()">Desarrollador/a</a></li>
+                    <li><a href="#developer" onclick="toggleMenu()">Desarrollador</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-
     <section class="presentation-section">
         <div class="presentation-content">
             <h1>Bienvenidos a Variedades Sonia</h1>
@@ -42,8 +39,6 @@
         </div>
     </section>
     
-
-    <!-- Cápsulas de categorías -->
     <section id="categories" class="category-section">
         <h2>Categorías</h2>
         <div class="category-grid">
@@ -69,8 +64,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Sección de productos (oculta inicialmente) -->
+
     <section id="products" class="products-section" style="display: none;">
         <h2 id="products-category">Productos</h2>
         <div class="products-grid">
@@ -79,7 +73,6 @@
         <button class="back-button" onclick="backToCategories()">Volver a Categorías</button>
     </section>
 
-    <!-- Sección de productos recientes -->
     <section id="recent-products" class="recent-products-section">
         <h2>Productos Recientes</h2>
         <div class="recent-products-grid">
@@ -87,7 +80,6 @@
         </div>
     </section>
 
-    <!-- Sección de contacto -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Contacto</h2>
@@ -103,7 +95,6 @@
         </div>
     </section>
 
-    <!-- Sección del Desarrollador/a -->
     <section id="developer" class="section developer-section">
         <div class="container">
             <h2>Sobre el Desarrollador</h2>
