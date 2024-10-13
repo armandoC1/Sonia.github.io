@@ -49,7 +49,7 @@
         {
           "nombre": "Tinte marca STAY Beautiful",
           "precio": "$3",
-          "imagenes": ["/tinte1.jpg"],
+          "imagenes": ["tinte1.jpg"],
           "descripcion": "Tintes permanentes de marca STAY Beautiful",
           "colores": [
             {
@@ -99,7 +99,7 @@
         {
           "nombre": "TINTE DE MARCA TOV CH COLOR",
           "precio": "$2.50",
-          "imagenes": ["/tinte2.jpg"],
+          "imagenes": ["tinte2.jpg"],
           "descripcion": "Tintes permanentes de marca TOV CH COLOR",
           "colores": [
             {
@@ -148,7 +148,7 @@
         {
           "nombre": "TINTE DE MARCA PURE COLOR",
           "precio": "$2.50",
-          "imagenes": ["/tinte3.jpg"],
+          "imagenes": ["tinte3.jpg"],
           "descripcion": "Tintes permanentes de marca PURE COLOR",
           "colores": [
             {
@@ -176,7 +176,7 @@
         {
           "nombre": "TINTE DE MARCA NICE COLOR",
           "precio": "$2.50",
-          "imagenes": ["/tinte4.jpg"],
+          "imagenes": ["tinte4.jpg"],
           "descripcion": "Tintes permanentes de marca NICE COLOR",
           "colores": [
             {
@@ -188,7 +188,7 @@
         {
           "nombre": "TINTE DE MARCA KBCOLOR",
           "precio": "$5",
-          "imagenes": ["/tinte5.jpeg"],
+          "imagenes": ["tinte5.jpeg"],
           "descripcion": "Tintes permanentes de marca KBCOLOR",
           "colores": [
             {
@@ -200,7 +200,7 @@
         {
           "nombre": "TINTE DE MARCA ZIS",
           "precio": "$5",
-          "imagenes": ["/tinte7.jpeg"],
+          "imagenes": ["tinte7.jpeg"],
           "descripcion": "Tintes permanentes de marca ZIS",
           "colores": [
             {
@@ -216,7 +216,7 @@
         {
           "nombre": "TINTE DE MARCA COLOR EAZY",
           "precio": "$5",
-          "imagenes": ["/tinte6.jpeg"],
+          "imagenes": ["tinte6.jpeg"],
           "descripcion": "Tintes permanentes de marca COLOR EAZY",
           "colores": [
             {
