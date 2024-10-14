@@ -1,78 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Varidades Sonia - Página principal</title>
+    <title>Variedades Sonia - Página principal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <header>
         <div class="container">
             <h1>Bazar</h1>
-            
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-
-            <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
-    
-            <nav>
-                <ul id="main-menu">
-                    <li><a href="#presentation" onclick="toggleMenu()">Inicio</a></li>
-                    <li><a href="#categories" onclick="toggleMenu()">Categorías</a></li>
-                    <li><a href="#recent-products" onclick="toggleMenu()">Productos Recientes</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
-                    <li><a href="#developer" onclick="toggleMenu()">Desarrollador</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
-    
+
     <section class="presentation-section">
         <div class="presentation-content">
             <h1>Bienvenidos a Variedades Sonia</h1>
             <p>Encuentra lo que buscas con la mejor calidad y precio</p>
-            <a href="#contact" class="btn-presentation">Contáctanos</a>
         </div>
     </section>
-    
+
     <section id="categories" class="category-section">
         <h2>Categorías</h2>
         <div class="category-grid">
-            <div class="category-card" onclick="showProducts('colonias')">
-                <img src="perfume.webp" alt="Colonias y Fragancias">
-                <h3>Colonias y Fragancias</h3>
+            <div class="category-card">
+                <a href="colonias.html">
+                    <img src="perfume.webp" alt="Colonias y Fragancias">
+                    <h3>Colonias y Fragancias</h3>
+                </a>
             </div>
-            <div class="category-card" onclick="showProducts('cuidado')">
-                <img src="cuidado personal.webp" alt="Cuidado Personal">
-                <h3>Cuidado Personal</h3>
+            <div class="category-card">
+                <a href="cuidado.html">
+                    <img src="cuidado personal.webp" alt="Cuidado Personal">
+                    <h3>Cuidado Personal</h3>
+                </a>
             </div>
-            <div class="category-card" onclick="showProducts('ropa')">
-                <img src="ropa.webp" alt="Ropa">
-                <h3>Ropa</h3>
+            <div class="category-card">
+                <a href="ropa.html">
+                    <img src="ropa.webp" alt="Ropa">
+                    <h3>Ropa</h3>
+                </a>
             </div>
-            <div class="category-card" onclick="showProducts('electrodomesticos')">
-                <img src="electrodomesticos.webp" alt="Electrodomésticos">
-                <h3>Electrodomésticos</h3>
+            <div class="category-card">
+                <a href="electrodomesticos.html">
+                    <img src="electrodomesticos.webp" alt="Electrodomésticos">
+                    <h3>Electrodomésticos</h3>
+                </a>
             </div>
-            <div class="category-card" onclick="showProducts('otros_tintes')">
-                <img src="tintes.webp" alt="Tintes">
-                <h3>Tintes</h3>
+            <div class="category-card">
+                <a href="tintes.html">
+                    <img src="tintes.webp" alt="Tintes">
+                    <h3>Tintes</h3>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="products" class="products-section" style="display: none;">
-        <h2 id="products-category">Productos</h2>
-        <div class="products-grid">
-            <!-- Aquí se cargarán los productos dinámicamente -->
-        </div>
-        <button class="back-button" onclick="backToCategories()">Volver a Categorías</button>
-    </section>
-
+    <!-- Sección de productos recientes -->
     <section id="recent-products" class="recent-products-section">
         <h2>Productos Recientes</h2>
         <div class="recent-products-grid">
@@ -80,6 +66,7 @@
         </div>
     </section>
 
+    <!-- Sección de contacto -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Contacto</h2>
@@ -90,11 +77,15 @@
                         <i class="fas fa-phone-alt"></i> +502 7298 3578
                     </a>
                 </li>
-                <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/nombre-negocio" target="_blank">Síguenos en Facebook</a></li>
+                <li>
+                    <i class="fab fa-facebook"></i> 
+                    <a href="https://facebook.com/nombre-negocio" target="_blank">Síguenos en Facebook</a>
+                </li>
             </ul>
         </div>
     </section>
 
+    <!-- Sección del Desarrollador -->
     <section id="developer" class="section developer-section">
         <div class="container">
             <h2>Sobre el Desarrollador</h2>
@@ -118,8 +109,6 @@
         <p>&copy; 2024 Bazar. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Archivo JavaScript enlazado -->
     <script src="script.js"></script>
 </body>
-
 </html>

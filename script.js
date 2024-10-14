@@ -1,24 +1,23 @@
+// Función para cargar productos desde el archivo JSON
 function loadProducts(categoria) {
     fetch('productos.json')
         .then(response => response.json())
         .then(data => {
             let productos = [];
 
+            // Filtra los productos según la categoría
             if (categoria === 'producto_destacado') {
                 productos = data.producto_destacado;
                 renderCarousel(productos);
             }
-
             else if (categoria === 'otros') {
                 productos = data.otros;
                 renderProducts(productos, categoria);
             }
-
             else if (categoria === 'otros_tintes') {
                 productos = data.otros.tintes;
                 renderProducts(productos, categoria);
             }
-
             else {
                 productos = data.productos.filter(product => product.categoria === categoria);
                 renderProducts(productos, categoria);
@@ -27,12 +26,15 @@ function loadProducts(categoria) {
         .catch(err => console.error('Error al cargar el JSON', err));
 }
 
+// Función para mostrar los productos de categoría en el DOM
 function renderProducts(productos, categoria) {
     const productsGrid = document.querySelector('.products-grid');
-    productsGrid.innerHTML = ''; 
+    productsGrid.innerHTML = ''; // Limpiar productos anteriores
 
     productos.forEach(product => {
         let imageGallery = '';
+
+        // Verifica si el producto tiene varias imágenes
         if (product.imagenes && product.imagenes.length > 1) {
             imageGallery = `
             <div class="carousel-container">
@@ -49,6 +51,7 @@ function renderProducts(productos, categoria) {
         }
 
         let colorOptions = '';
+        // Verifica si el producto tiene opciones de colores
         if (product.colores && product.colores.length > 0) {
             colorOptions = `
             <div class="color-description"><strong>Colores disponibles:</strong></div>
@@ -61,6 +64,7 @@ function renderProducts(productos, categoria) {
             </div>`;
         }
 
+        // Tarjeta de producto
         const productCard = `
             <div class="product-card">
                 ${imageGallery} <!-- Muestra la galería o una imagen -->
@@ -73,10 +77,12 @@ function renderProducts(productos, categoria) {
         productsGrid.innerHTML += productCard;
     });
 
+    // Mostrar la sección de productos y ocultar las categorías
     document.getElementById('products').style.display = 'block';
     document.getElementById('categories').style.display = 'none';
 }
 
+// Función para manejar la navegación del carrusel de imágenes
 function nextImage(button) {
     const carousel = button.closest('.carousel-container').querySelector('.carousel');
     const totalImages = carousel.children.length;
@@ -102,6 +108,7 @@ function getCurrentImageIndex(carousel) {
     return currentIndex;
 }
 
+// Función para cargar productos recientes desde el archivo JSON
 function loadRecentProducts() {
     fetch('productos.json')
         .then(response => response.json())
@@ -112,9 +119,10 @@ function loadRecentProducts() {
         .catch(err => console.error('Error al cargar los productos recientes', err));
 }
 
+// Función para mostrar los productos recientes en el DOM
 function renderRecentProducts(productos) {
     const recentProductsGrid = document.querySelector('.recent-products-grid');
-    recentProductsGrid.innerHTML = ''; 
+    recentProductsGrid.innerHTML = ''; // Limpiar productos anteriores
 
     productos.forEach(product => {
         const productCard = `
@@ -129,17 +137,20 @@ function renderRecentProducts(productos) {
     });
 }
 
+// Función para cargar productos según la categoría seleccionada
 function showProducts(categoria) {
     loadProducts(categoria); 
     const categoryTitle = document.getElementById('products-category');
     categoryTitle.textContent = `Productos de ${capitalizeFirstLetter(categoria.replace('_', ' '))}`;
 }
 
+// Función para volver a las categorías
 function backToCategories() {
     document.getElementById('products').style.display = 'none';
     document.getElementById('categories').style.display = 'block';
 }
 
+// Función para capitalizar la primera letra
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -152,9 +163,10 @@ function toggleMenu() {
     overlay.classList.toggle('active');
 }
 
+// Iniciar la página mostrando productos destacados y productos recientes
 document.addEventListener('DOMContentLoaded', () => {
-    loadProducts('producto_destacado');
-    loadRecentProducts(); 
+    loadProducts('producto_destacado'); // Mostrar productos destacados
+    loadRecentProducts(); // Mostrar productos recientes
     document.getElementById('categories').style.display = 'block';
     document.getElementById('products').style.display = 'none';
     document.getElementById('carousel').style.display = 'block';
