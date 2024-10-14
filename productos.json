@@ -26,22 +26,28 @@
 
   "productos_recientes": [
     {
-      "nombre": "Colonia para Hombre",
-      "precio": "$20",
-      "imagen": "https://via.placeholder.com/200x150",
-      "descripcion": "Fragancia masculina"
+      "nombre": "YINAS TOMMY",
+      "precio": "",
+      "imagen": "yinas1.jpeg",
+      "descripcion": "Yinas marca TOMMY numero 36 unisex color negro"
+    },    
+    {
+      "nombre": "YINAS CLASICAS",
+      "precio": "",
+      "imagen": "yinas2.jpeg",
+      "descripcion": "Yinas clasicas numero 40 unisex"
     },
     {
-      "nombre": "Colonia para Hombre",
-      "precio": "$20",
-      "imagen": "https://via.placeholder.com/200x150",
-      "descripcion": "Fragancia masculina"
+      "nombre": "YINAS TOMMY",
+      "precio": "",
+      "imagen": "yinas3.jpeg",
+      "descripcion": "Yinas marca TOMMY numero 39 unisex color azul negro"
     },
     {
-      "nombre": "Colonia para Hombre",
-      "precio": "$20",
-      "imagen": "https://via.placeholder.com/200x150",
-      "descripcion": "Fragancia masculina"
+      "nombre": "YINAS NIKE",
+      "precio": "",
+      "imagen": "yinas4.jpeg",
+      "descripcion": "Yinas marca NIKE unisex color negro"
     }
   ],
   "otros": {
